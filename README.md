@@ -3,7 +3,7 @@
 
 <!--Task List-->
 * [ ] Task-1
-** [ ] Aplha-Beta Filter
-** [ ] Aplha-Beta-Gamma Filter
-** [ ]Report
+    * [ ] Aplha-Beta Filter
+    * [ ] Aplha-Beta-Gamma Filter
+    * [ ]Report
 * [ ] Task-2
