@@ -23,6 +23,11 @@ v_est=zeros(1,n); %velocity estimates of aircraft
 x_temp=x_init+v_init*t_samp;
 v_temp=v_init;
 for i = 1:n
+    %Save temporary predicted estimates
+    x_est(i)=x_temp;
+    v_est(i)=v_temp;
+
+
     %State Extrapolation Equations:
         %x(i)=x_temp;
         %v(i)=v_temp;
@@ -34,10 +39,6 @@ for i = 1:n
     x_temp=x(i)+v(i)*t_samp;
     v_temp=v(i);
     
-    %Save temporary predicted estimates
-    x_est(i)=x_temp;
-    v_est(i)=v_temp;
-
 end
 
 format shortG;
