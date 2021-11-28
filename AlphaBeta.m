@@ -34,13 +34,15 @@ for i = 1:n
     x_temp=x(i)+v(i)*t_samp;
     v_temp=v(i);
     
+    %Save temporary predicted estimates
     x_est(i)=x_temp;
     v_est(i)=v_temp;
 
 end
 
-%format shortG;
-[t./5;z;x;v;x_est;v_est]
+format shortG;
+%format LONG E ;
+[t./5;z;x;v;x_est;v_est] %#ok<NOPTS> 
 
-plot(t,x);
-
+plot(t,x,t,z,t,x_init+v_init*t, 'linewidth',1.5);
+legend;
