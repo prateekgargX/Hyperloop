@@ -3,13 +3,14 @@ clc;
 
 alpha=0.2;
 beta=0.1;
+gamma=0;
 t_samp=5; %track-to-track interval
 
 %initialise values
 x_init=30000;
 v_init=40;
 
-z=load('ab.txt'); %measurements
+z=load('abr.txt'); %measurements
 n=size(z,2);
 t=linspace(t_samp,t_samp*n,n); %time values
 
