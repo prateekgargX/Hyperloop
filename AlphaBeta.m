@@ -45,7 +45,8 @@ format shortG;
 %format LONG E ;
 [t./5;z;x;v;x_est;v_est] %#ok<NOPTS> 
 figure
-plot(t,x,t,z,t,x_init+v_init*t, 'linewidth',1.5);
-figure
-plot(t,v,'linewidth',1.5);
+plot(t,x,t,z,t,x_init+v_init*t,t,x_est, 'linewidth',1.5);
 legend;
+%figure
+%plot(t,v,t,v_est, 'linewidth',1.5);
+%legend;

@@ -1,9 +1,9 @@
-clear;
-clc;
+%clear;
+%clc;
 
-alpha=0.5;
-beta=0.4;
-gamma=0.1;
+%alpha=0.5;
+%beta=0.4;
+%gamma=0.1;
 t_samp=5; %track-to-track interval
 
 %initialise values
@@ -54,7 +54,7 @@ format shortG;
 [t./5;z;x;v;a;x_est;v_est;a_est] %#ok<NOPTS> 
 figure
 plot(t,x,t,z,t,x_est,'linewidth',1.5);
+%figure
+%plot(t,v,t,v_est);
 figure
-plot(t,v,t,v_est);
-figure
-plot(t,a,t,a_est)
+plot(t,a,t,a_est);
