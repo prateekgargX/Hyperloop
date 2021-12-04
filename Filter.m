@@ -4,6 +4,7 @@ n=size(z,2);
 alpha=zeros(1,n);
 beta=zeros(1,n);
 gamma=zeros(1,n);
+
 alpha=alpha+alph;
 beta=beta+bet;
 gamma=gamma+gamm;
