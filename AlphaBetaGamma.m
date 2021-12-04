@@ -1,9 +1,9 @@
 %clear;
 %clc;
 
-%alpha=0.5;
-%beta=0.4;
-%gamma=0.1;
+alpha=0.5;
+beta=0.4;
+gamma=0.1;
 t_samp=5; %track-to-track interval
 
 %initialise values
@@ -44,6 +44,7 @@ for i = 1:n
     x(i)=x_temp+alpha*(z(i)-x_temp);  
     v(i)=v_temp+beta*(z(i)-x_temp)/t_samp;
     a(i)=a_temp+2*gamma*(z(i)-x_temp)/t_samp/t_samp;
+    
     x_temp=x(i)+v(i)*t_samp+a(i)*t_samp*t_samp/2;
     v_temp=v(i)+a(i)*t_samp;
     a_temp=a(i)

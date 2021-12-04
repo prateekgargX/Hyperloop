@@ -1,6 +1,3 @@
-clear;
-clc;
-
 alpha=0.2;
 beta=0.1;
 t_samp=5; %track-to-track interval
