@@ -42,10 +42,20 @@ for i = 1:n
     p_temp=p_est(i);                         %Extrapolated estimate uncertainty
 end
 figure
-
-plot(1:n,H*ones(n),'g',1:n,z,'b-s',1:n,x_est,'r-o',-1,x_init,'y-d','LineWidth',1.5);
-%legend('True Value','Measurements','Estimates','Initialization');
-legend("show");
+plot(1:n,H*ones(1,n),'g',1:n,z,'b-s',1:n,x_est,'r-o',-1,x_init,'y-d','LineWidth',1.5);
+legend('True Value','Measurements','Estimates','Initialization');
+title('Building Height')
+xlabel('Measurement Number')
+ylabel('Height(m)')
+figure
+plot(1:n,,'g',1:n,z,'b-s',1:n,x_est,'r-o',-1,x_init,'y-d','LineWidth',1.5);
+legend('True Value','Measurements','Estimates','Initialization');
+title('Building Height')
+xlabel('Measurement Number')
+ylabel('Height(m)')
+figure
+plot(1:n,H*ones(1,n),'g',1:n,z,'b-s',1:n,x_est,'r-o',-1,x_init,'y-d','LineWidth',1.5);
+legend('True Value','Measurements','Estimates','Initialization');
 title('Building Height')
 xlabel('Measurement Number')
 ylabel('Height(m)')

@@ -1,13 +1,11 @@
-%True Value
+%True Value of hieght
 H=50;
-t_samp=5;
 %initialise values
 x_init=60;
 p_init=225;
 
 z=load('Building.txt'); %measurements
 n=size(z,2); %Number of Samples provided in the file
-t=linspace(t_samp,t_samp*n,n); %time values tobe used to plot the curves
 
 x_est=zeros(1,n); %Height estimates of building
 p_est=zeros(1,n); %estimates of uncertainity in estimates
@@ -41,11 +39,24 @@ for i = 1:n
     x_temp=x_est(i);                         %Constant Dynamics
     p_temp=p_est(i);                         %Extrapolated estimate uncertainty
 end
+
+%Visualizing the data
 figure
-plot(1:n,H*ones(1,n),'g',1:n,z,'b-s',1:n,x_est,'r-o',-1,x_init,'y-d','LineWidth',1.5);
+plot(1:n,H*ones(1,n),'g',1:n,z,'b-s',1:n,x_est,'r-o',0,x_init,'y-d','LineWidth',1.5);
 legend('True Value','Measurements','Estimates','Initialization');
 title('Building Height')
 xlabel('Measurement Number')
 ylabel('Height(m)')
+figure
+plot(1:n,r,'b-s',1:n,p_est,'r-o',0,p_init,'y-d','LineWidth',1.5);
+legend('Measurement Uncertainity','Estimate  Uncertainity','Initialization Uncertainity');
+title('Uncertainities')
+xlabel('Measurement Number')
+ylabel('Uncertainity')
+figure
+plot(1:n,K,'k-v','LineWidth',1.5);
+title('Kalman Gain')
+xlabel('Measurement Number')
+ylabel('Kalman Gain')
 pause;
 close all;
