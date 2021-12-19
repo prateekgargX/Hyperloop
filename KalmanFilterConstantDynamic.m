@@ -17,7 +17,7 @@ altimeter_uncertainity=25; %Measurement uncertainity
 r=zeros(1,n)+altimeter_uncertainity; %Broadcasting to entire array
 K=zeros(1,n); %Kalman gain
 
-%Estimate initial values
+%Initial prediction values
 x_temp=x_init;
 p_temp=p_init;
 
