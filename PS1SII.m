@@ -56,6 +56,8 @@ legend('True Value','Measurement-II','Estimates','Initialization');
 title('Range Estimates')
 xlabel('Measurement Number')
 ylabel('Range(m)')
+pause;
+
 plot(1:n,px_est,'b-s',1:n,px_est,'r-o','LineWidth',1.5);
 legend('Estimate  Uncertainity');
 title('Uncertainity')
