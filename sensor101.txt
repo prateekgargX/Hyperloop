@@ -1,0 +1,9 @@
+Battery = 50 - 55
+Non-ideality
+*Phase change mateials = thermal paste
+peltier effect
+Cell tab
+cell overheat-------thermal runaway-------internal resistance-------
+
+-------------Microcontroller-----------------------------------
+-low voltage system

@@ -5,7 +5,6 @@ t_samp=5; %track-to-track interval
 n=10; %Number of Samples
 t=linspace(t_samp,t_samp*n,n); %time values
 
-%% ======================= Scenario-I =======================
 x_init=30000; %True initial range
 v_init=40; %True velocity
 [X,~,~]=System(x_init,v_init,0,t_samp,n);
